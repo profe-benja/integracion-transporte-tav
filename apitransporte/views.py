@@ -8,7 +8,8 @@ from .serializers import SolicitudTransporteSerializer
 from transporte.models import SolicitudTransporte
 from rest_framework import status
 from django.http import Http404
-    
+
+
 class Solicitud_APIView(APIView):
     def get(self, request, format=None, *args, **kwargs):
         solicitud = SolicitudTransporte.objects.all()

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'transporte',
     'apitransporte',
+    'bodega',
     'rest_framework'
 ]
 
