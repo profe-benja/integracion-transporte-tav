@@ -13,7 +13,7 @@ class Solicitud_APIView(APIView):
     def get(self, request, format=None, *args, **kwargs):
         solicitud = SolicitudTransporte.objects.all()
         serializer = SolicitudTransporteSerializer(solicitud, many=True)
-        
+        # hola a todos
         return Response(serializer.data)
     # def post(self, request, format=None):
     #     serializer = PostSerializers(data=request.data)
