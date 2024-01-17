@@ -25,8 +25,13 @@ SECRET_KEY = 'django-insecure-)fn$12%4z2mu^7q9s8i-rxyw()emhrek9&^@pjf*_ub8rng*8$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['192.168.137.1']
 
+# no es mi ip es la ip del cliente
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5500",
+]
 
 # Application definition
 
@@ -38,9 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'transporte',
-    'apitransporte',
     'bodega',
-    'rest_framework'
+    'integrations',
+    # 'apitransporte',
+    'rest_api_bodega',
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -51,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'sistema_transporte.urls'

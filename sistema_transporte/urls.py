@@ -21,5 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('transporte/', include('transporte.urls')),
     path('bodega/', include('bodega.urls')),
-    path('api/', include('apitransporte.urls')),
+    # path('api/', include('apitransporte.urls')),
+    
+    path('api/bodega/v1/', include('rest_api_bodega.urls')),
+    path('integrations/', include('integrations.urls')),
+    # path('api/transporte/v1/', include('rest_api_bodega.urls'),
 ]
