@@ -1,10 +1,11 @@
 from django.urls import path, include
-from .views import data, producto_index, musicpro_index, consumir_api,teclanet
-
+from .views import cargafacil_solicitud, salesforce_productos, teclanet_productos
 urlpatterns = [
-    # path('transporte/', include('transporte.urls')),
-    # path('producto', producto_index, name="bodega_producto_index"),
+    path('transporte/cargafacil/solicitud', cargafacil_solicitud, name="cargafacil_solicitud"),
     
+    
+    path('bodega/salesforce/productos', salesforce_productos, name="salesforce_productos"),
+    path('bodega/teclanet/productos', teclanet_productos, name="teclanet_productos"),
     # path('productos_musicpro', musicpro_index, name="musicpro_index"),
     # path('consumir_api', consumir_api, name="consumir_api"),
 
